@@ -28,17 +28,25 @@ function createListItem() {
     todoItem.innerText = txt;
     todoItem.append(todoItemText);
 
-    const todoItemDeleteBtn = document.createElement('button');
-    todoItemDeleteBtn.classList.add("todo-item-delete");
-    todoItemDeleteBtn.innerHTML = "&#128498";
-    todoItemDeleteBtn.addEventListener('click', () => {
-        todoList.removeChild(todoItem);
-    })
-    todoItem.append(todoItemDeleteBtn)
+    // const todoItemDeleteBtn = document.createElement('button');
+    // todoItemDeleteBtn.classList.add("todo-item-delete");
+    // todoItemDeleteBtn.innerHTML = "&#128498";
+    // todoItemDeleteBtn.addEventListener('click', () => {
+    //     todoList.removeChild(todoItem);
+    // })
+    // todoItem.append(todoItemDeleteBtn)
 
     todoList.append(todoItem);
 
     newItemInput.value = '';
+
 }
+const myData = JSON.parse(localStorage.tasks);
+myData.forEach(element => {
+    todoList.innerHTML += `<li>${element.label}</li>`;
+});
+
+
+// Create a box on the page that shows I've stored local data
 
 // find a way to not only persist the data, load it back 
