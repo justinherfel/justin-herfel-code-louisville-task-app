@@ -25,14 +25,6 @@ function createListItem() {
     todoItem.innerText = txt;
     todoItem.append(todoItemText);
 
-    // const todoItemDeleteBtn = document.createElement('button');
-    // todoItemDeleteBtn.classList.add("todo-item-delete");
-    // todoItemDeleteBtn.innerHTML = "&#128498";
-    // todoItemDeleteBtn.addEventListener('click', () => {
-    //     todoList.removeChild(todoItem);
-    // })
-    // todoItem.append(todoItemDeleteBtn)
-
     todoList.append(todoItem);
 
     newItemInput.value = '';
