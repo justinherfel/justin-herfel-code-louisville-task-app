@@ -16,9 +16,6 @@ function createListItem() {
     });
     console.log(allTodoItems);
     localStorage.setItem('tasks', JSON.stringify(allTodoItems))
-    // Write a function that adds each individual item to the local storage
-    // Normally there is an updatelocalstorage function
-    // Now i have all todo items in localstorage, I can run a fucntion to take all of those items and put it into that list. I could create the HTML of the list of those items, so that every time I refresh the page i have the list again 
 
     const todoItem = document.createElement('li');
     todoItem.classList.add("todo-item");
@@ -39,14 +36,9 @@ function createListItem() {
     todoList.append(todoItem);
 
     newItemInput.value = '';
-
 }
+
 const myData = JSON.parse(localStorage.tasks);
 myData.forEach(element => {
     todoList.innerHTML += `<li>${element.label}</li>`;
 });
-
-
-// Create a box on the page that shows I've stored local data
-
-// find a way to not only persist the data, load it back 
