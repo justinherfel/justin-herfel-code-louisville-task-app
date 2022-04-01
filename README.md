@@ -40,6 +40,9 @@ The JavaScript file inside the public folder is saving the information you type 
 
 In order to prove this information persists, you can close out the browswer window completely, and then open a new window, and again type 'http://localhost:3000' and press return. You should see the task list app appear with the populated list you previously typed.
 
+Please note:
+
+* You might notice, if you go through the commit history of my repo, that I took out one of the features I had initially added, the delete button. This was done simply for time's sake. With the addition of the myData const on line 33 of the index.js file in the public folder, I didn't have the time to research and write, and debug a new function and have the delete button work properly.
 
 
 
