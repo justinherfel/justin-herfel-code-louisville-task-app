@@ -1,12 +1,12 @@
 const newItemInput = document.querySelector(".add-item-text"); // Variable created, which selects the element by class name (identifies form controls)
 const newItemBtn = document.querySelector(".add-item-btn"); // Variable created, which selects the element by class name
 const todoList = document.querySelector(".todo-list"); // Variable created, which selects the element by class name
-const allTodoItems = JSON.parse(localStorage.getItem('tasks')) ?? []; // ?? returns the right-side expression when the left side expression is either null or undefined
+const allTodoItems = JSON.parse(localStorage.getItem('tasks')) ?? []; // Sends the data to local storage and ?? returns the right-side expression when the left side expression is either null or undefined
 
-newItemBtn.addEventListener("click", createListItem);
+newItemBtn.addEventListener("click", createListItem); // Adds a click action to the button, and then adds the createListItem function as an argument of what to do when the click is made
 
 function createListItem() {
-    const txt = newItemInput.value;
+    const txt = newItemInput.value; 
     if (txt === '') {
         alert("Please type something!")
         return;
